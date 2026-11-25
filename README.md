@@ -205,7 +205,7 @@ and the **"Served by"** line in the footer changes as you refresh.
 
 ## Demo video
 
-▶️ Demo (under 2 minutes): [add your video link here]
+▶️ Demo (under 2 minutes): https://youtu.be/SvDWxH-UN8M
 
 ---
 
