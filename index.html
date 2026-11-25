@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewa Safari . Weather for your journey</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap header-inner">
+            <div class="brand">
+                <span class="logo" aria-hidden="true">&#127757;</span>
+            <div>
+            <h1>Hewa Safari</h1>
+        <p class="tagline" data-i18n="tagline"></p>
+        </div>
+       </div>
+       <div class="toggles">
+        <div class="toggle" role="group"aria-label="Language / Lugha">
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-unit="sw">SW</button>
+                </div>
+            
+                <div class="toggle" role="group" aria-label="Temperature unit">
+                    <button type="button" data-unit="C">°C</button>
+                    <button type="button" data-unit="F">°F</button>
+                </div>
+            </div>
+         </div>
+        </header>
+
+        <main class="wrap">
+            <section class="card search-card">
+                <form id="search-form" class="search" role="search" autocomplete="off">
+                <label for="search-input" data-i18n="searchLabel"></label>
+                <div class="search-row">
+                    <input id="search-input" type="search" maxlength="80" required data-i18n-placeholder="searchPlaceholder">
+                    <button type="submit" class="primary" data-i18n="searchButton"></button>
+                </div>
+            </form>
+            <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+
+            <div id="results"></div>
+        </section>
+
+
+        <section class="card">
+            <h2 data-i18n="yourCities"></h2>
+            <div id="city-chips" class="chips"></div>
+        </section>
+
+
+        <section id="forecast-panel" class="card" hidden>
+            <div id="forecast-message" aria-live="polite"></div>
+            <div id="forecast-body" hidden>
+                <div id="current" class="current"></div>
+
+                <div class="forecast-head">
+                    <h2 data-i18n="forecastTitle"></h2>
+                    <div class="controls">
+                        <label>
+                            <span data-i18n="sortLabel"></span>
+                            <select id="sort-select">
+                                <option value="date" data-i18n="sortDate"></option>
+                                <option value="warmest" data-i18n="sortWarmest"></option>
+                                <option value="coolest" data-i18n="sortCoolest"></option>
+                                <option value="driest" data-i18n="sortDriest"></option>
+                                <option value="wettest" data-i18n="sortWettest"></option>
+                            </select>
+                        </label>
+                        <label class="check">
+                            <input id="dry-only" type="checkbox">
+                            <span data-i18n="dryOnly"></span>
+                        </label>
+                        <label>
+                            <span data-i18n="minTempLabel"></span>
+                            <span class="with-unit">
+                                <input id="min-high" type="number" step="1" inputmode="numeric">
+                                <span id="min-high-unit">°C</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div id="days" class="days"></div>
+
+
+                <h2 data-i18n="tipsTitle"></h2>
+                <ul id="tips" class="tips"></ul>
+            </div>
+        </section>
+
+
+        <section id="compare-section" class="card" hidden>
+            <h2 data-i18n="compareTitle"></h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n="city"></th>
+                            <th scope="col" data-i18n="avgHigh"></th>
+                            <th scope="col" data-i18n="avgLow"></th>
+                            <th scope="col" data-i18n="rainyDays"></th>
+                            <th scope="col" data-i18n="bestDay"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="compare-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>
+                <span data-i18n="credit"></span>
+                <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a>
+                    (CC BY 4.0)
+                </p>
+                <p id="served-by" hidden><span data-i18n="servedBy"></span>: <strong id="served-by-name"></strong></p>
+                    </div>
+                </footer>
+
+
+                <script type="module" src="js/app.js"></script>
+</body>
+</html>      

@@ -1,0 +1,16 @@
+# Secrets (this app needs no API keys, but never commit any)
+.env
+*.env
+*.pem
+*.key
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and build artifacts
+*.log
+*.tar.gz
+node_modules/
